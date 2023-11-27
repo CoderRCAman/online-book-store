@@ -1,0 +1,169 @@
+.inputWrap {
+  display: flex;
+  border: 1px solid #c9c9c9;
+  padding: 1em;
+  /* background-color: red; */
+  border-radius: 0.4em;
+  margin-top: 1em;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.inputWrap input {
+  color: #4b5563;
+}
+
+.badge {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px solid #c9c9c9;
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: #737373;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+.badge:hover {
+  background-color: #f1f5f9;
+}
+body {
+  font-family: Roboto;
+}
+
+.trending-wrap h4 {
+  font-size: 1rem;
+  color: #64748b;
+}
+.book-card {
+  padding: 1em;
+  max-width: 100%;
+  min-height: 100px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 0.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+.book-card img {
+  width: 100%;
+  max-height: 250px;
+  border-radius: 0.3em;
+  object-fit: cover;
+}
+.book-card .title {
+  color: #3f3f46;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.book-card .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #94a3b8;
+}
+.book-card .price-buy {
+  color: #525252;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 0.4em;
+  justify-content: space-between;
+}
+
+.book-wrap {
+  width: 100%;
+  display: grid;
+  gap: .5em;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  /* justify-items: center; */
+}
+
+.book-info-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.book-info-wrap img {
+  width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 0.4em;
+  /* align-self: self-start; */
+}
+.book-info-wrap .details {
+  /* padding: 0 1.2em; */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+.book-info-wrap .title {
+  font-size: 1.2rem;
+  color: #475569;
+  font-weight: bold;
+}
+.book-info-wrap .author {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: bold;
+  font-style: italic;
+}
+.book-info-wrap .description {
+  color: #6b7280;
+}
+
+.book-info-wrap .price {
+  border: 1px solid #c9c9c9;
+  width: 50px;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  color: #737373;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 640px) {
+  .book-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+  .book-info-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 1em;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .book-info-wrap img {
+    width: 500px;
+  }
+  .book-info-wrap .details {
+    padding: 0 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .book-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (min-width: 1024px) {
+}
